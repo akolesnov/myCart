@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <a href="./index.html" class="header__link">Каталог</a>
+      <a href="./cart.html" class="header__link">Корзина <span class="js-cart-total-count-items cart__bold"></span></a>
+    </header>
+
+    <section class="section section-cart">
+      <div class="container section-cart__container">
+        <h2 class="page-title">Корзина</h2>
+        <div class="cart js-cart-wrapper">
+          <form class="form cart__form">
+            <div class="cart__items js-cart">
+            </div>
+            <div class="cart__totals">
+              <div>Всего элементов: <span class="js-cart-total-count-items cart__bold"></span></div>
+              <div>Итого: <span class="cart__bold"><span class="js-cart-total-price"></span> ₽</span></div>
+            </div>
+            <button class="btn clear-cart" type="submit" >Очистить корзину</button>
+            <h3 class="title">Заполните форму</h3>
+            <div class="form__main">
+              <input class="form__input" type="text" name="Имя" placeholder="Имя" required="">
+              <input class="form__input" type="text" name="Телефон" placeholder="Телефон" required="">
+              <input class="form__input" type="text" name="Адрес" placeholder="Адрес" required="">
+              <input class="js-cart-total-price-input" type="hidden" name="Общая сумма">
+              <select class="form__input" name="оплата">
+                <option value="Оплата наличными">Оплата наличными</option>
+                <option value="Оплата картой">Оплата картой</option>
+              </select>
+              <button class="btn form__btn" type="submit">Отправить</button>
+            </div>
+          </form>
+          <div class="cart__empty">
+            <p class="cart__info">Нет товаров</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>
